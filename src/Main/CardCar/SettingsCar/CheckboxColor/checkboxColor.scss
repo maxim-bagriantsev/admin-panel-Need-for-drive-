@@ -1,0 +1,32 @@
+///////////Checkbox
+.setting-car-color-checkbox {
+  margin-top: 14.7px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.checkbox-color .ant-checkbox-wrapper .ant-checkbox-inner {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  border-collapse: separate;
+  transition: all 0.3s;
+  background: #007BFF;
+}
+
+.checkbox-color .ant-checkbox-checked .ant-checkbox-inner::after {
+  border: 2px solid #FFFFFF;
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(
+                  45deg) scale(1) translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+
+}

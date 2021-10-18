@@ -1,0 +1,25 @@
+.upload-form {
+  display: flex;
+  height: 29px;
+  margin-left: 52px;
+  margin-right: 52px;
+  margin-bottom: 22px;
+  text-align: center;
+  border: 1px solid #BECAD6;
+  justify-content: space-between;
+  border-radius: 4px;
+
+}
+
+.input-upload_input {
+  margin-left: 13px;
+}
+
+.input-upload_button {
+  width: 65px;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  border-left: 1px solid #BECAD6;
+  background: #E9ECEF;
+}
