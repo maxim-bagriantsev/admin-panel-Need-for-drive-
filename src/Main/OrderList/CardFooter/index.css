@@ -2,6 +2,7 @@
     margin: 0 auto;
 }
 
+
 .ant-pagination-options {
     display: none;
 }
@@ -19,7 +20,7 @@
 .ant-pagination-item-active a {
     font-size: 15px;
     font-weight: 500;
-    color: #FFFFFF!important;
+    color: #FFFFFF !important;
 }
 
 .ant-pagination-item-active a:hover {
@@ -47,5 +48,18 @@
     font-size: 15px;
     font-weight: 500;
     color: #1890ff;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #f5f6f8;
+}
+
+.ant-menu-inline .ant-menu-item {
+    height: 57px;
+}
+
+.ant-menu-inline .ant-menu-item:not(:last-child) {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 

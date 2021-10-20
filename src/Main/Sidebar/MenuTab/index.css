@@ -1,0 +1,61 @@
+.ant-menu-item::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-left: 4px solid #1890ff;
+    border-right: 0.1px solid #E1E5EB !important;
+    transform: scaleY(0.0001);
+    opacity: 0;
+    transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+    content: '';
+}
+
+.ant-menu-item-selected a, .ant-menu-item-selected a:hover {
+    font-weight: 500;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #FBFBFB;
+}
+
+
+
+
+.ant-menu-inline .ant-menu-item:not(:last-child) {
+    border-bottom: 1px solid #E1E5EB;
+    margin-bottom: 0;
+}
+
+.ant-menu-inline .ant-menu-item:last-child {
+    border-bottom: 1px solid #E1E5EB;
+}
+
+.ant-menu-item-selected svg path {
+
+    fill: #1890ff;
+}
+
+.menu-tab-icon svg{
+    width: 18px;
+    height: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

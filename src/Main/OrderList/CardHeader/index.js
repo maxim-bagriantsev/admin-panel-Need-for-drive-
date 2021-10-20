@@ -1,6 +1,6 @@
 import React from 'react';
 import {DropdownItem} from "../CardFooter/Dropdown";
-import doubleArrow from "../../../assats/SVG/doubleArrow.svg";
+import doubleArrow from "../../../assets/SVG/doubleArrow.svg";
 import {Button} from "antd";
 import './headerContent.scss'
 

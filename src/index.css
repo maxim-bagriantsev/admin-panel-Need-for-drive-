@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'HelveticaRegular';
-    src: local('Helvetica-Regular'), url('./assats/fonts/Helvetica.ttf')
+    src: local('Helvetica-Regular'), url('assets/fonts/Helvetica.ttf')
 }
 
 @font-face {
     font-family: 'RobotoRegular';
-    src: local('Roboto-regular'), url('./assats/fonts/Roboto-Regular.ttf')
+    src: local('Roboto-regular'), url('assets/fonts/Roboto-Regular.ttf')
 }
 
 @font-face {
     font-family: 'RobotoMedium';
-    src: local('Roboto-medium'), url('./assats/fonts/Roboto-Medium.ttf')
+    src: local('Roboto-medium'), url('assets/fonts/Roboto-Medium.ttf')
 }
 
 body {

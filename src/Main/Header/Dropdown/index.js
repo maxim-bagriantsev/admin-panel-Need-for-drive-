@@ -2,7 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import './index.css';
 import {Menu, Dropdown} from 'antd';
-import dropdown from '../../../assats/SVG/dropdown.svg'
+import dropdown from '../../../assets/SVG/dropdown.svg'
 
 const menu = (
     <Menu>

@@ -1,9 +1,11 @@
 .card-orderList {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f6f8;
 }
 
 .card-orderList-background {
-  margin-top: 30px;
   margin-left: 32px;
   margin-right: 25px;
   align-items: center;
@@ -14,6 +16,7 @@
 
 .card-orderList-title {
   margin-top: 28.5px;
+  margin-bottom: 28.5px;;
   margin-left: 31.5px;
   font-size: 29px;
   line-height: 33.4px;

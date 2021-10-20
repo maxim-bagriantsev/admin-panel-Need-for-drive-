@@ -1,5 +1,5 @@
 import React from 'react';
-import car from "../../../assats/Images/car-mock.png";
+import car from "../../../assets/Images/car-mock.png";
 import {UploadInput} from "./UploadInput";
 import {ProgressCar} from "./ProgressCar";
 import {Description} from "./Description";

@@ -1,9 +1,9 @@
 import React from 'react';
-import notification from '../../assats/SVG/notification.svg';
+import notification from '../../assets/SVG/notification.svg';
 import './header.scss';
-import avatar from '../../assats/Images/avatar.png';
+import avatar from '../../assets/Images/avatar.png';
 import {DropdownMenu} from './Dropdown';
-import search from '../../assats/SVG/search.svg'
+import search from '../../assets/SVG/search.svg'
 
 export const Header = () => {
     return (

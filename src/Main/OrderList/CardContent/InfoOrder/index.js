@@ -1,5 +1,5 @@
 import React from 'react';
-import car from "../../../../assats/Images/car-mock.png";
+import car from "../../../../assets/Images/car-mock.png";
 import './infoOrder.scss'
 
 export const InfoOrder = () => {

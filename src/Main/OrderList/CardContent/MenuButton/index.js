@@ -1,7 +1,7 @@
 import React from 'react';
-import ready from "../../../../assats/SVG/ready.svg";
-import cancel from "../../../../assats/SVG/cancel.svg";
-import edit from "../../../../assats/SVG/edit.svg";
+import ready from "../../../../assets/SVG/ready.svg";
+import cancel from "../../../../assets/SVG/cancel.svg";
+import edit from "../../../../assets/SVG/edit.svg";
 import './button.scss'
 
 export const MenuButton = () => {

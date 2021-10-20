@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from "../../assats/SVG/logo.svg";
+import logo from "../../assets/SVG/logo.svg";
 import './sidebar.scss'
-import {Sider} from "./Sider";
+import {MenuTab} from "./MenuTab";
+
 
 export const Sidebar = () => {
     return (
@@ -14,7 +15,7 @@ export const Sidebar = () => {
                     <h3 className='sidebar-header-title'>Need for car</h3>
                 </div>
             </div>
-            <Sider/>
+            <MenuTab/>
         </div>
     );
 };

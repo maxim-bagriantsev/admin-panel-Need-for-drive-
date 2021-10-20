@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 import {Menu, Dropdown, Button, Space} from 'antd';
 import {firstDropdown, twoDropdown, freeDropdown, fourDropdown} from "./const";
-import doubleArrow from '../../../../assats/SVG/doubleArrow.svg'
+import doubleArrow from '../../../../assets/SVG/doubleArrow.svg'
 
 const menu = (
     <Menu>
