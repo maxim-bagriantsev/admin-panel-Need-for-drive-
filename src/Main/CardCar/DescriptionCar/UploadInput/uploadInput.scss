@@ -8,7 +8,6 @@
   border: 1px solid #BECAD6;
   justify-content: space-between;
   border-radius: 4px;
-
 }
 
 .input-upload_input {
@@ -22,4 +21,14 @@
   overflow: hidden;
   border-left: 1px solid #BECAD6;
   background: #E9ECEF;
+}
+
+@media (max-width: 1400px) {
+  .input-upload_input {
+  }
+
+  .upload-form {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }

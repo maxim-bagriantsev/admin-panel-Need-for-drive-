@@ -37,3 +37,17 @@
   line-height: 14.3px;
   font-weight: 400;
 }
+
+@media (max-width: 1024px) {
+  .details-card-car {
+    width: inherit;
+    margin-left: 27.5px;
+    margin-right: 27.5px;
+  }
+  .details-card-setting {
+    width: inherit;
+    margin-top: 20px;
+    margin-left: 27.5px;
+    margin-right: 27.5px;
+  }
+}

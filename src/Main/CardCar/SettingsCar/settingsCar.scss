@@ -1,4 +1,5 @@
 .details-card-setting {
+  height: fit-content;
   padding-left: 18px;
 }
 
@@ -10,4 +11,20 @@
   line-height: 20.5px;
   color: #3D5170;
   margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .card-setting-title {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  .details-card-setting {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .details-card-setting {
+        margin-bottom: 20px;
+  }
 }

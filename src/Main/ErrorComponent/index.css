@@ -1,0 +1,17 @@
+.error-component-button .ant-btn  {
+    width: 95px;
+    height: 29px;
+    background-color: #007bff;
+    border: .5px solid #007bff;
+}
+
+.error-component-button .ant-btn:hover  {
+    background-color: #007bff;
+    border: .5px solid #007bff;
+}
+
+.error-component-button .ant-btn:focus {
+    background-color: #007bff;
+    border: .5px solid #007bff;
+}
+

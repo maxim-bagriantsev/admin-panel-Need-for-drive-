@@ -33,3 +33,18 @@
   font-weight: 500;
   color: #818EA3;
 }
+
+@media (max-width: 460px) {
+  .footer {
+    padding: 16px 8px;
+    font-size: 10px;
+  }
+
+  .footer-left {
+    margin-left: 0px;
+  }
+
+  .footer-right {
+    margin-right: 0px;
+  }
+}

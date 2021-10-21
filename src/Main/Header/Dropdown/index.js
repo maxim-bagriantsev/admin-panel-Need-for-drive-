@@ -5,24 +5,33 @@ import {Menu, Dropdown} from 'antd';
 import dropdown from '../../../assets/SVG/dropdown.svg'
 
 const menu = (
-    <Menu>
-        <Menu.Item key="0">
-            <a href="https://www.antgroup.com">1st menu item</a>
-        </Menu.Item>
-        <Menu.Item key="1">
-            <a href="https://www.aliyun.com">2nd menu item</a>
-        </Menu.Item>
-        <Menu.Item key="2">
-            <a href="https://www.aliyun.com">3nd menu item</a>
-        </Menu.Item>
-
-    </Menu>
+    <div className='user-panel'>
+        <Menu>
+            <Menu.Item key="0" disabled>
+                <a>Меню</a>
+            </Menu.Item>
+            <Menu.Item key="1" disabled>
+                <a>Настройки</a>
+            </Menu.Item>
+            <Menu.Item key="2" disabled>
+                <a>Данные профиля</a>
+            </Menu.Item>
+            <Menu.Item key="3">
+                <a>Выйти</a>
+            </Menu.Item>
+        </Menu>
+    </div>
 )
 
 export const DropdownMenu = () => (
-        <Dropdown overlay={menu} trigger={['click']}>
+    <div className='dropdown-menu'>
+        <Dropdown
+            overlay={menu}
+            trigger={['click']}
+        >
             <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                 {<img src={dropdown} alt=""/>}
             </a>
         </Dropdown>
+    </div>
 );

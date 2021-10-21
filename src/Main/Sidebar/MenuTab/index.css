@@ -19,9 +19,6 @@
     background-color: #FBFBFB;
 }
 
-
-
-
 .ant-menu-inline .ant-menu-item:not(:last-child) {
     border-bottom: 1px solid #E1E5EB;
     margin-bottom: 0;
@@ -29,17 +26,20 @@
 
 .ant-menu-inline .ant-menu-item:last-child {
     border-bottom: 1px solid #E1E5EB;
+    margin-top: 0;
 }
 
 .ant-menu-item-selected svg path {
-
     fill: #1890ff;
 }
 
-.menu-tab-icon svg{
-    width: 18px;
-    height: 18px;
+.menu-tab-icon svg {
+    width: 17px;
+    height: 17px;
 }
+
+
+
 
 
 

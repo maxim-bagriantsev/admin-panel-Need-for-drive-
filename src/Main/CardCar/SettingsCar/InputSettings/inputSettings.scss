@@ -61,3 +61,36 @@
 .button-plus:active {
   color: #BECAD6;
 }
+
+@media (max-width: 1024px) {
+  .setting-car-model-and-type {
+    display: flex;
+    flex-direction: column;
+  }
+  .setting-car-type {
+    margin-left: 0;
+  }
+  .item-input, .item-input-color {
+    width: auto;
+  }
+
+  .button-plus {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .setting-car-type {
+    margin-left: 0;
+  }
+  .item-input, .item-input-color {
+    width: auto;
+  }
+
+  .button-plus {
+    margin-left: 10px;
+  }
+  .item-input {
+    margin-right: 20px;
+  }
+}

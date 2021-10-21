@@ -21,9 +21,13 @@ export const Header = () => {
                 </div>
                 <div className='block-3'>
                     <div className='header-panel'>
-                        <img className='header-panel-avatar' src={avatar} alt=""/>
-                        <div className='panel-user-text'>Admin</div>
-                        <DropdownMenu/>
+                        <div className='panel-admin'>
+                            <img className='header-panel-avatar' src={avatar} alt=""/>
+                            <div className='panel-user-text'>Admin</div>
+                        </div>
+                        <div className='panel-dropdown'>
+                            <DropdownMenu/>
+                        </div>
                     </div>
                 </div>
             </div>

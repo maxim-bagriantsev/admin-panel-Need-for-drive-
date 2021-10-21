@@ -1,22 +1,24 @@
 import React from 'react';
 import {Button} from "antd";
+import './errorComponent.scss'
+import './index.css'
 
 export const ErrorComponent = (props) => {
     return (
         <section className='error-component'>
-            <h1 className='error-component__code'>
+            <h1 className='error-component-status'>
                 { props.status }
             </h1>
 
-            <h2 className='error-component__title'>
+            <h2 className='error-component-title'>
                 { props.title }
             </h2>
 
-            <span className='error-component__info'>
+            <span className='error-component-subtitle'>
         { props.message }
       </span>
 
-            <div className='error-component__button'>
+            <div className='error-component-button'>
                 <Button backgrond='blue'>
                     Назад
                 </Button>

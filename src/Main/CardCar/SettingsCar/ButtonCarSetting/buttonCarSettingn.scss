@@ -4,7 +4,6 @@
   margin-top: 300px;
   margin-left: 18px;
   margin-bottom: 18px;
-
   font-size: 11.5px;
   font-weight: 400;
   line-height: 13px;
@@ -71,13 +70,29 @@
 .button-delete:hover {
   background: #a9203d;
 }
+
 .button-delete:active {
   background: #a9203d;
 }
+
 .button-delete:focus {
   background: #a9203d;
 }
 
 .buttons-one {
   margin-right: 18px;
+}
+
+@media (max-width: 1024px) {
+  .buttons {
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-bottom: 18px;
+    font-size: 8px;
+  }
+
+  .button-save {
+    margin-bottom: 10px;
+  }
 }

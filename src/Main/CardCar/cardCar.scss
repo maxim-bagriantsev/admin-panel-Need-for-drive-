@@ -14,6 +14,7 @@
 }
 
 .card-setting-title {
+  width: auto;
   margin-top: 28.5px;
   margin-left: 31.5px;
   font-size: 29px;
@@ -23,5 +24,43 @@
 }
 
 
+@media (max-width: 1024px) {
+  .card-setting {
+    width: 100%;
+    align-items: center;
+    overflow: auto;
+  }
+
+  .card-setting-background {
+    flex-direction: column;
+  }
+  .card-setting-title {
+  }
+}
 
 
+@media (max-width: 1150px) {
+  .card-setting {
+    width: 100%;
+
+  }
+
+  .card-setting-background {
+
+  }
+  .card-setting-title {
+  }
+}
+
+@media (max-width: 1400px) {
+  .card-setting {
+    width: 100%;
+  }
+
+  .card-setting-background {
+
+  }
+  .card-setting-title {
+    width: auto;
+  }
+}

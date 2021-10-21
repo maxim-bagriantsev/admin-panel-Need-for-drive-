@@ -37,3 +37,24 @@
   margin: 0;
 }
 
+@media (max-width: 640px) {
+  .sidebar {
+    width: 40px;
+  }
+
+  .sidebar-header {
+    width: 40px;
+  }
+
+  .sidebar-content {
+    align-items: center;
+  }
+
+  .sidebar-header-image {
+    margin-right: 0;
+  }
+
+  .sidebar-header-title {
+    display: none;
+  }
+}

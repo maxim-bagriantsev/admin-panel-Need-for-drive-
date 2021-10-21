@@ -4,22 +4,23 @@ import {panelList} from "./constants";
 import Icon from '@ant-design/icons';
 import './index.css';
 import {Menu} from "antd";
+import './menuTab.scss'
 
 export const MenuTab = () => {
 
     const tabItem = panelList.map((item, id) => {
 
         return (
-            <Menu.Item
-                key={id}
-                icon={<Icon component={item.icon} className='menu-tab-icon'/>}
-
-            >
-                <NavLink
-                    to={item.link}>
-                    {item.title}
-                </NavLink>
-            </Menu.Item>
+                <Menu.Item
+                    key={id}
+                    icon={<Icon component={item.icon} className='menu-tab-icon'/>}
+                    className='menu-tabs-item'
+                >
+                    <NavLink className='item-tab-title'
+                             to={item.link}>
+                        {item.title}
+                    </NavLink>
+                </Menu.Item>
         )
     })
 
@@ -27,7 +28,7 @@ export const MenuTab = () => {
         <>
             <Menu
                 style={{width: 256}}
-                defaultSelectedKeys={['1']}
+                defaultSelectedKeys={['0']}
                 mode={'inline'}
                 theme={'light'}
                 className='menu-tabs'
