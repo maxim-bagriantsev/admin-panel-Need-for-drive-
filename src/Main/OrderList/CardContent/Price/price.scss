@@ -10,3 +10,16 @@
 .card-content-price-style {
   text-align: center;
 }
+
+@media (max-width: 1400px) {
+  .card-content-price {
+
+    width: 20%;
+    margin-left: 21px;
+    margin-bottom: 0px;
+    font-size: 18px ;
+  }
+  .card-content-price-style {
+    text-align: start;
+  }
+}

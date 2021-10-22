@@ -23,3 +23,21 @@
   font-weight: 400;
   color: #3D5170;
 }
+
+@media (max-width: 1150px) {
+  .card-orderList{
+    width: auto;
+
+  }
+  .card-orderList-title {
+    width: auto;
+    margin-top: 20px;
+    font-size: 24px;
+    margin-bottom: 12px;
+
+  }
+  .card-orderList-background {
+    width: auto;
+  }
+}
+

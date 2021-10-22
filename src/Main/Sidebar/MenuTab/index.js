@@ -11,16 +11,20 @@ export const MenuTab = () => {
     const tabItem = panelList.map((item, id) => {
 
         return (
-                <Menu.Item
-                    key={id}
-                    icon={<Icon component={item.icon} className='menu-tab-icon'/>}
-                    className='menu-tabs-item'
-                >
-                    <NavLink className='item-tab-title'
-                             to={item.link}>
-                        {item.title}
+            <Menu.Item
+                key={id}
+                className='menu-tabs-item'
+                icon={
+                    <NavLink to={item.link}>
+                        <Icon component={item.icon} className='menu-tab-icon'/>
                     </NavLink>
-                </Menu.Item>
+                }
+            >
+                <NavLink className='item-tab-title'
+                         to={item.link}>
+                    {item.title}
+                </NavLink>
+            </Menu.Item>
         )
     })
 
@@ -36,7 +40,6 @@ export const MenuTab = () => {
                 {tabItem}
             </Menu>
         </>
-
     );
 };
 

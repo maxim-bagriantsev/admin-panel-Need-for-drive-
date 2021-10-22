@@ -2,7 +2,7 @@ import React from 'react';
 import {CardHeader} from "./CardHeader";
 import {CardFooter} from "./CardFooter";
 import {CardContent} from "./CardContent";
-import './card.scss'
+import './orderList.scss'
 import 'antd/dist/antd.css';
 
 export const OrderList = () => {

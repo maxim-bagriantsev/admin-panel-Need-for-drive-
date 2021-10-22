@@ -41,6 +41,32 @@
 
 .error-component-button span {
   color: #FFFFFF;
+}
 
+@media (max-width: 680px) {
+  .error-component-status {
+    font-size: 50px;
+  }
+
+  .error-component-title {
+    font-size: 30px;
+  }
+  .error-component-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .error-component-status {
+    font-size: 50px;
+  }
+
+  .error-component-title {
+    font-size: 30px;
+  }
+
+  .error-component-subtitle {
+    font-size: 16px;
+  }
 }
 

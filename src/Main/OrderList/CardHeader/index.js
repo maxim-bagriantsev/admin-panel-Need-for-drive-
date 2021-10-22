@@ -8,7 +8,7 @@ export const CardHeader = () => {
     return (
         <div className='content-header'>
             <div className='card-header'>
-                <DropdownItem icon={<img src={doubleArrow} alt=""/>}/>
+                <DropdownItem className='dropdown-item' icon={<img src={doubleArrow} alt=""/>}/>
                 <Button className='card-header-button' type="primary">Применить</Button>
             </div>
         </div>

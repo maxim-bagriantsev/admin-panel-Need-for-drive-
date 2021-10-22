@@ -36,3 +36,11 @@
 .item-button-icon {
   margin-right: 3.4px;
 }
+
+@media (max-width: 1150px) {
+  .card-content-buttons {
+    margin-left: 21px;
+    margin-top: 10px;
+  }
+
+}

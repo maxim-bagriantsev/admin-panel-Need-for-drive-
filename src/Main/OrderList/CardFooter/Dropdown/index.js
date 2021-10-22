@@ -1,51 +1,66 @@
 import React from 'react';
 import './index.css';
-import {Menu, Dropdown, Button, Space} from 'antd';
-import {firstDropdown, twoDropdown, freeDropdown, fourDropdown} from "./const";
-import doubleArrow from '../../../../assets/SVG/doubleArrow.svg'
+import {Select} from 'antd';
+import Icon from '@ant-design/icons';
+import {ReactComponent as doubleArrow} from '../../../../assets/SVG/doubleArrow.svg'
+import {ItemDropdown} from "./ItemDropdown";
 
-const menu = (
-    <Menu>
-        <Menu.Item key="1">
-            1st menu item
-        </Menu.Item>
-        <Menu.Item key="2">
-            2nd menu item
-        </Menu.Item>
-        <Menu.Item key="3">
-            3rd menu item
-        </Menu.Item>
-    </Menu>
-);
+const {Option} = Select;
+
+function handleChange(value) {
+    console.log(`selected ${value}`);
+}
 
 export const DropdownItem = () => {
     return (
-        <Space wrap>
-            <Dropdown overlay={menu}>
-                <Button className='header-content-dropdown'>
-                    {firstDropdown}
-                    <img className='content-dropdown-icon' src={doubleArrow} alt=""/>
-                </Button>
-            </Dropdown>
-            <Dropdown overlay={menu}>
-                <Button className='header-content-dropdown'>
-                    {twoDropdown}
-                    <img className='content-dropdown-icon' src={doubleArrow} alt=""/>
-                </Button>
-            </Dropdown>
-            <Dropdown overlay={menu}>
-                <Button className='header-content-dropdown'>
-                    {freeDropdown}
-                    <img className='content-dropdown-icon' src={doubleArrow} alt=""/>
-                </Button>
-            </Dropdown>
-            <Dropdown overlay={menu}>
-                <Button className='header-content-dropdown'>
-                    {fourDropdown}
-                    <img className='content-dropdown-icon' src={doubleArrow} alt=""/>
-                </Button>
-            </Dropdown>
-        </Space>
+        <>
+            <div className='items-dropdown-button'>
+                <ItemDropdown/>
+                {/*<Select defaultValue="За неделю"*/}
+                {/*        suffixIcon={<Icon component={doubleArrow} className='content-dropdown-icon'/>}*/}
+                {/*        onChange={handleChange}*/}
+                {/*        className='item-dropdown-button'*/}
+                {/*>*/}
+                {/*    <Option value="За сегодня">За сегодня</Option>*/}
+                {/*    <Option value="За неделю">За неделю</Option>*/}
+                {/*    <Option value="За месяц">За неделю</Option>*/}
+                {/*    <Option value="За год">За год</Option>*/}
+                {/*</Select>*/}
+
+                <Select defaultValue="Elantra"
+                        suffixIcon={<Icon component={doubleArrow} className='content-dropdown-icon'/>}
+                        onChange={handleChange}
+                        className='item-dropdown-button'
+                >
+                    <Option value="Elantra">Elantra</Option>
+                    <Option value="Любая">Любая</Option>
+                    <Option value="Renoult">Renoult</Option>
+                    <Option value="Honda">Honda</Option>
+                </Select>
+
+                <Select defaultValue="Ульяновск"
+                        suffixIcon={<Icon component={doubleArrow} className='content-dropdown-icon'/>}
+                        onChange={handleChange}
+                        className='item-dropdown-button'
+                >
+                    <Option value="Ульяновск">Ульяновск</Option>
+                    <Option value="Самара">Самара</Option>
+                    <Option value="Москва">Москва</Option>
+                    <Option value="Санкт-Петербург">Санкт-Петербург</Option>
+                </Select>
+
+                <Select defaultValue="В процессе"
+                        suffixIcon={<Icon component={doubleArrow} className='content-dropdown-icon'/>}
+                        onChange={handleChange}
+                        className='item-dropdown-button'
+                >
+                    <Option value="Новый">Новый</Option>
+                    <Option value="Подтвержденный">Подтвержденный</Option>
+                    <Option value="Отмененный">Отмененный</Option>
+                    <Option value="В процессе">В процессе</Option>
+                </Select>
+            </div>
+        </>
     );
 };
 
