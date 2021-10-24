@@ -7,7 +7,7 @@ export const StepRouter = () => {
     return (
         <Switch>
             <Route path="/" component={LoginPanel} exact/>
-            <Route path="/main" component={Main}/>
+            <Route path="/main/" component={Main}/>
         </Switch>
     );
 };

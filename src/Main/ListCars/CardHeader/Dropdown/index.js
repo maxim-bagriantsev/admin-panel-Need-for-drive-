@@ -1,13 +1,12 @@
 import React from 'react';
 import './index.css';
-import {ItemButtons} from "./ItemButtons";
-
+import {ItemButton} from "./ItemButtons";
 
 export const DropdownItems = () => {
     return (
         <>
             <div className='items-dropdown-buttons'>
-                <ItemButtons/>
+                <ItemButton/>
             </div>
         </>
     );

@@ -1,14 +1,14 @@
 import React from 'react';
-import {DropdownItems} from "../CardFooter/Dropdown";
-import doubleArrow from "../../../assets/SVG/doubleArrow.svg";
+import {DropdownItems} from "./Dropdown";
+
 import {Button} from "antd";
 import './headerContent.scss'
 
-export const CardHeader = () => {
+export const CarsHeader = () => {
     return (
         <div className='content-header'>
-            <div className='card-header'>
-                <DropdownItems className='dropdown-item' icon={<img src={doubleArrow} alt=""/>}/>
+            <div className='cars-header'>
+                <DropdownItems className='dropdown-item'/>
                 <Button className='card-header-button' type="primary">Применить</Button>
             </div>
         </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import {Select} from "antd";
 import Icon from "@ant-design/icons";
 import {ReactComponent as doubleArrow} from "../../../../../assets/SVG/doubleArrow.svg";
+import {classCars} from "./constants";
 
 const {Option} = Select;
 
@@ -9,17 +10,24 @@ function handleChange(value) {
     console.log(`selected ${value}`);
 }
 
-export const ItemDropdown = () => {
+const dropdownButtonClassCars = classCars.map((item, id) => {
     return (
-        <Select defaultValue="За неделю"
+        <Option key={id}
+                value={item.value}>{item.text}</Option>
+    )
+})
+
+export const ItemButton = () => {
+    return (
+        <>
+            <Select
+                defaultValue="Любые"
                 suffixIcon={<Icon component={doubleArrow} className='content-dropdown-icon'/>}
                 onChange={handleChange}
                 className='item-dropdown-button'
-        >
-            <Option value="За сегодня">За сегодня</Option>
-            <Option value="За неделю">За неделю</Option>
-            <Option value="За месяц">За неделю</Option>
-            <Option value="За год">За год</Option>
-        </Select>
+            >
+                {dropdownButtonClassCars}
+            </Select>
+        </>
     );
 };

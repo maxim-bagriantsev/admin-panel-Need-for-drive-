@@ -24,3 +24,14 @@
     height: 100vh;
   }
 }
+
+
+@media (max-width: 1980px) {
+  .main {
+    width: 100%;
+    overflow: hidden;
+  }
+  .main-content {
+    height: 100vh;
+  }
+}
