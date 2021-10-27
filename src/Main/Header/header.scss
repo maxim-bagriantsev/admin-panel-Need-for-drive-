@@ -137,17 +137,10 @@
   }
 
   .header-icon-circle {
-    position: absolute;
-    margin-left: 5%;
+    margin-left: -5%;
     margin-top: -2%;
-    width: 14px;
-    height: 14px;
-    font-size: 9px;
-    background: #C4183C;
-    border: 1px solid #C4183C;
-    border-radius: 50%;
-    color: #FFFFFF;
   }
+
   .panel-user-text{
     margin-right: 20px;
   }
@@ -181,7 +174,6 @@
   }
 
   .header-icon-circle {
-    position: absolute;
     margin-left: 5%;
     margin-top: -2%;
   }
@@ -201,7 +193,6 @@
     flex-basis: 25%;
   }
   .header-icon-circle {
-    position: absolute;
     margin-left: 5.5%;
     margin-top: -1%;
   }
@@ -221,8 +212,7 @@
     flex-basis: 30%;
   }
   .header-icon-circle {
-    position: absolute;
-    margin-left: 5.5%;
-    margin-top: -1%;
+    margin-left: 4%;
+    margin-top: -0.8%;
   }
 }

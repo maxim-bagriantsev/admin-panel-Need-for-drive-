@@ -65,7 +65,7 @@
 }
 
 .item-input {
-  width: 100%;
+  width: 100% !important;
   height: 29px;
   margin-bottom: 15px;
   border-radius: 3px;
@@ -102,4 +102,21 @@
   font-size: 11px;
   line-height: 14px;
   color: #fff;
+}
+
+@media (max-width: 596px) {
+  .login-page_header-image {
+    width: 35px;
+    height: 35px;
+  }
+  .login-page_header-title {
+    font-size: 20px;
+  }
+
+  .login-page-form-title {
+    font-size: 15px;
+  }
+  .login-page_footer-btn {
+    width: 70px;
+  }
 }

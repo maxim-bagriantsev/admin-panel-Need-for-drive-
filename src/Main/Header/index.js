@@ -14,7 +14,7 @@ export const Header = () => {
                     <input className='header-input' placeholder='Поиск ...' type="text"/>
                 </div>
                 <div className='block-2'>
-                    <div>
+                    <div className='block-2-img'>
                         <img className='header-icon' src={notification} alt=""/>
                         <div className='header-icon-circle'>2</div>
                     </div>

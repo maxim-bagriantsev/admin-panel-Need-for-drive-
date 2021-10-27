@@ -21,16 +21,11 @@
     }
     .ant-table-container {
         flex-wrap: wrap;
-
     }
 
     .ant-table-thead tr th {
         width: 100% !important;
     }
 
-
-    .ant-table-thead tr th {
-
-    }
 }
 
