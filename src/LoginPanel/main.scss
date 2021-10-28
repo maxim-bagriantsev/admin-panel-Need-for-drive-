@@ -104,6 +104,14 @@
   color: #fff;
 }
 
+.login-page_footer-btn:hover {
+  background: #0374ee;
+}
+
+.login-page_footer-btn:active {
+  background: #045ebd;
+}
+
 @media (max-width: 596px) {
   .login-page_header-image {
     width: 35px;
