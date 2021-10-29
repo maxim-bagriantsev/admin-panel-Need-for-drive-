@@ -3,7 +3,7 @@ import {Route, Switch} from "react-router-dom";
 import {LoginPanel} from "../LoginPanel";
 import {Main} from "../Main";
 import {useSelector} from "react-redux";
-
+import {Redirect} from "react-router";
 
 export const StepRouter = () => {
 
@@ -13,18 +13,14 @@ export const StepRouter = () => {
         return state.reducerData
     })
 
-    if (isAuthorised === true) {
-        return <Route path="/main/carSetting" component={Main}/>
-    }
-
-    if (isAuthorised === false) {
-        return <Route path="/" component={LoginPanel} exact/>
-    }
-
     return (
         <Switch>
-            <Route path="/" component={LoginPanel} exact/>
-            <Route path="/main/carSetting" component={Main}/>
+            <Route path='/login' component={LoginPanel} exact/>
+            {
+                isAuthorised
+                    ? <Route path='/main' component={Main}/>
+                    : <Redirect to='/login'/>
+            }
         </Switch>
     );
 };

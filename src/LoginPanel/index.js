@@ -7,6 +7,7 @@ import {useDispatch} from "react-redux";
 import {message} from "antd";
 import './index.css';
 
+//свойства всплывающего сообщения
 message.config({
     top: 0,
     duration: 3,
@@ -86,12 +87,11 @@ export const LoginPanel = () => {
                     </form>
                     <div className='login-page_footer'>
                         <a className='login-page_footer-text' href='#'>Запросить доступ</a>
-
                         <button className='login-page_footer-btn'
                                 onClick={hendleClickLogIn}
-                        >Войти
+                        >
+                            Войти
                         </button>
-
                     </div>
                 </div>
             </section>
