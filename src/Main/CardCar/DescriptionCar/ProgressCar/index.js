@@ -1,11 +1,15 @@
 import React from 'react';
-import 'antd/dist/antd.css';
-import './index.css';
+
 import {Progress} from 'antd';
+import './index.css';
 import './progressCar.scss'
 
-export const ProgressCar = () => {
-    const progress = 74
+export const ProgressCar = ({modelCar, typeCar, descriptionCar, fileList, minPriceCar, maxPriceCar}) => {
+    const arr = [modelCar, typeCar, descriptionCar, fileList, minPriceCar, maxPriceCar]
+
+    const sumItem = arr.filter(Boolean).length
+
+    const progress = Math.round(sumItem / 6 * 100)
 
     return (
 
@@ -17,10 +21,9 @@ export const ProgressCar = () => {
                         {progress}%
                     </span>
                 </div>
-                <Progress  percent={74} showInfo={false}/>
+                <Progress percent={progress} showInfo={false}/>
             </div>
-
         </div>
+    )
+}
 
-    );
-};

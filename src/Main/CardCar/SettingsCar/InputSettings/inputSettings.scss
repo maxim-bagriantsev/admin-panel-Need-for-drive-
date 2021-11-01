@@ -54,8 +54,24 @@
   cursor: pointer;
 }
 
+.button-plus:hover {
+  border: 1px solid #8fe581;
+}
+
+.button-plus:active {
+  border: 1px solid #31e112;
+}
+
 .button-plus-icon {
   color: #BECAD6;
+}
+
+.button-plus-icon:hover {
+  color: #8fe581;
+}
+
+.button-plus-icon:active {
+  color: #31e112;
 }
 
 .button-plus:active {

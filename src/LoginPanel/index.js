@@ -1,13 +1,13 @@
 import React, {useState} from "react";
 import logo from '../assets/SVG/logo.svg'
-import './main.scss'
 import {postLogIn} from "../api/api";
 import {useHistory} from "react-router";
 import {useDispatch} from "react-redux";
 import {message} from "antd";
 import './index.css';
+import './main.scss'
 
-//свойства всплывающего сообщения
+//свойства всплывающего сообщения авторизации
 message.config({
     top: 0,
     duration: 3,
