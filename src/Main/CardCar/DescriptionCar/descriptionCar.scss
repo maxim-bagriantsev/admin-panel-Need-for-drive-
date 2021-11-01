@@ -19,10 +19,19 @@
 }
 
 .details-card-car-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 34.5px;
   margin-bottom: 10px;
-
   height: 110px;
+
+}
+
+.details-card-car-image image {
+  max-width: 100%;
+
+
 }
 
 .details-card-title {

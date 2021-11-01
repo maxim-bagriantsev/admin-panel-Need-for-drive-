@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import './cardCar.scss'
 import {DescriptionCar} from "./DescriptionCar";
 import {SettingsCar} from "./SettingsCar";
+import './cardCar.scss'
 
 export const CardCar = ({newColor}) => {
     const [modelCar, setModelCar] = useState('')

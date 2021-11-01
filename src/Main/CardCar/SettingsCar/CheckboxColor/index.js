@@ -1,6 +1,6 @@
 import React from 'react';
-import './checkboxColor.scss'
 import {Checkbox} from "antd";
+import './checkboxColor.scss'
 
 export const CheckboxColor = ({newColor, setNewColor}) => {
 

@@ -1,11 +1,10 @@
 import React from 'react';
-
 import {Progress} from 'antd';
 import './index.css';
 import './progressCar.scss'
 
-export const ProgressCar = ({modelCar, typeCar, descriptionCar, fileList, minPriceCar, maxPriceCar}) => {
-    const arr = [modelCar, typeCar, descriptionCar, fileList, minPriceCar, maxPriceCar]
+export const ProgressCar = ({modelCar, typeCar, descriptionCar, addedImageCar, minPriceCar, maxPriceCar}) => {
+    const arr = [modelCar, typeCar, descriptionCar, addedImageCar, minPriceCar, maxPriceCar]
 
     const sumItem = arr.filter(Boolean).length
 
