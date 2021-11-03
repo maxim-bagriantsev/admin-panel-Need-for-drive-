@@ -9,6 +9,7 @@ export const CheckboxColor = ({newColor, setNewColor}) => {
     }
 
     const colors = newColor.map((item, id) => {
+
         return (
             <label className='checkbox-color'
                    key={id}

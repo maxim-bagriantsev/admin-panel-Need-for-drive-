@@ -3,7 +3,15 @@ import {Progress} from 'antd';
 import './index.css';
 import './progressCar.scss'
 
-export const ProgressCar = ({modelCar, typeCar, descriptionCar, addedImageCar, minPriceCar, maxPriceCar}) => {
+export const ProgressCar = ({
+                                modelCar,
+                                typeCar,
+                                descriptionCar,
+                                addedImageCar,
+                                minPriceCar,
+                                maxPriceCar
+                            }) => {
+
     const arr = [modelCar, typeCar, descriptionCar, addedImageCar, minPriceCar, maxPriceCar]
 
     const sumItem = arr.filter(Boolean).length
@@ -11,7 +19,6 @@ export const ProgressCar = ({modelCar, typeCar, descriptionCar, addedImageCar, m
     const progress = Math.round(sumItem / 6 * 100)
 
     return (
-
         <div className='progress'>
             <div className='progress-content'>
                 <div className='progress-content-header'>

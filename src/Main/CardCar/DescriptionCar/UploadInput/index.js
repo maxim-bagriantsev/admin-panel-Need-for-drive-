@@ -1,16 +1,14 @@
 import React, {useState} from 'react';
 import {Upload} from "antd";
 import ImgCrop from 'antd-img-crop';
-import {useDispatch} from "react-redux";
+
 import './uploadInput.scss';
 
-export const UploadInput = ({addedImageCar}) => {
-
-    const dispatch = useDispatch()
+export const UploadInput = ({addedImageCar, setImage}) => {
 
     const handleChangeImage = async ({file}) => {
+        setImage(file)
         const imageBase64 = await getBase64(file.originFileObj)
-        dispatch({type: "ADD_IMAGE_CAR", payload: file})
     }
 
     function getBase64(file) {
@@ -28,7 +26,7 @@ export const UploadInput = ({addedImageCar}) => {
                 <span>{addedImageCar ? ''
                     : 'Выберите файл...'}</span>
             </div>
-            <ImgCrop rotate >
+            <ImgCrop rotate>
                 <Upload
                     listType="picture"
                     className='input-upload_button'
@@ -37,7 +35,6 @@ export const UploadInput = ({addedImageCar}) => {
                     Обзор
                 </Upload>
             </ImgCrop>
-
         </div>
     );
 }

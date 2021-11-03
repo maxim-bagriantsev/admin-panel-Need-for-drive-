@@ -15,6 +15,7 @@ export const StepRouter = () => {
 
     return (
         <Switch>
+
             <Route path='/login' component={LoginPanel} exact/>
             {
                 isAuthorised

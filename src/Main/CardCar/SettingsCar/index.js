@@ -5,10 +5,11 @@ import {ButtonCarSetting} from "./ButtonCarSetting";
 import {InputTextArea} from "./InputTextArea";
 import './settingsCar.scss';
 
-
 export const SettingsCar = (props) => {
     const [nameColor, setNameColor] = useState('')
     const [newColor, setNewColor] = useState([])
+
+
 
     return (
         <div className='details-card-setting'>
@@ -28,11 +29,27 @@ export const SettingsCar = (props) => {
             />
             <CheckboxColor newColor={newColor}
                            setNewColor={setNewColor}
+                           nameColor={nameColor}
             />
+
             <InputTextArea descriptionCar={props.descriptionCar}
                            setDescriptionCar={props.setDescriptionCar}
             />
-            <ButtonCarSetting/>
+            <ButtonCarSetting modelCar={props.modelCar}
+                              setModelCar={props.setModelCar}
+                              typeCar={props.typeCar}
+                              setTypeCar={props.setTypeCar}
+                              minPriceCar={props.minPriceCar}
+                              setMinPriceCar={props.setMinPriceCar}
+                              maxPriceCar={props.maxPriceCar}
+                              setMaxPriceCar={props.setMaxPriceCar}
+                              descriptionCar={props.descriptionCar}
+                              setDescriptionCar={props.setDescriptionCar}
+                              newColor={newColor}
+                              setNameColor={setNameColor}
+                              setImage={props.setImage}
+                              setNewColor={setNewColor}
+            />
         </div>
     );
 };

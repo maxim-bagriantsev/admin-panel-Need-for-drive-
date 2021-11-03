@@ -9,12 +9,15 @@ export const CardCar = ({newColor}) => {
     const [descriptionCar, setDescriptionCar] = useState('')
     const [minPriceCar, setMinPriceCar] = useState('')
     const [maxPriceCar, setMaxPriceCar] = useState('')
+    const [image, setImage] = useState('')
 
     return (
         <div className='card-setting'>
             <h2 className='card-setting-title'>Карточка автомобиля</h2>
             <div className='card-setting-background'>
-                <DescriptionCar modelCar={modelCar}
+                <DescriptionCar image={image}
+                                setImage={setImage}
+                                modelCar={modelCar}
                                 typeCar={typeCar}
                                 minPriceCar={minPriceCar}
                                 maxPriceCar={maxPriceCar}
@@ -22,6 +25,8 @@ export const CardCar = ({newColor}) => {
                                 newColor={newColor}
                 />
                 <SettingsCar modelCar={modelCar}
+                             image={image}
+                             setImage={setImage}
                              setModelCar={setModelCar}
                              typeCar={typeCar}
                              setTypeCar={setTypeCar}

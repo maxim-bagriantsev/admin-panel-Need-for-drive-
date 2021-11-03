@@ -17,7 +17,7 @@ message.config({
 export const LoginPanel = () => {
     const [username, setUserName] = useState('')
     const [password, setPassword] = useState('')
-    let history = useHistory()
+    const history = useHistory()
     const dispatch = useDispatch()
 
     const hendleChangeUserName = (event) => {
