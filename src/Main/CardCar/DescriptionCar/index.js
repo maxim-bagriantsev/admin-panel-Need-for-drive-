@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {UploadInput} from "./UploadInput";
 import {ProgressCar} from "./ProgressCar";
 import {Description} from "./Description";
@@ -9,7 +9,7 @@ export const DescriptionCar = ({
                                    modelCar,
                                    typeCar,
                                    descriptionCar,
-                                   newColor,
+                                   newColors,
                                    minPriceCar,
                                    maxPriceCar,
                                    image,
@@ -36,7 +36,7 @@ export const DescriptionCar = ({
                          addedImageCar={image}
                          minPriceCar={minPriceCar}
                          maxPriceCar={maxPriceCar}
-                         newColor={newColor}/>
+                         newColors={newColors}/>
             <Description descriptionCar={descriptionCar}/>
         </div>
     );

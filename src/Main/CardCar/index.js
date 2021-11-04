@@ -3,7 +3,7 @@ import {DescriptionCar} from "./DescriptionCar";
 import {SettingsCar} from "./SettingsCar";
 import './cardCar.scss'
 
-export const CardCar = ({newColor}) => {
+export const CardCar = ({newColors}) => {
     const [modelCar, setModelCar] = useState('')
     const [typeCar, setTypeCar] = useState('')
     const [descriptionCar, setDescriptionCar] = useState('')
@@ -22,7 +22,7 @@ export const CardCar = ({newColor}) => {
                                 minPriceCar={minPriceCar}
                                 maxPriceCar={maxPriceCar}
                                 descriptionCar={descriptionCar}
-                                newColor={newColor}
+                                newColors={newColors}
                 />
                 <SettingsCar modelCar={modelCar}
                              image={image}

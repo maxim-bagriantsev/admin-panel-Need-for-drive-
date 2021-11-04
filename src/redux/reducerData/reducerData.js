@@ -1,17 +1,20 @@
 const initialState = {
     isAuthorised: null,
-    addedNewCardCar: null,
-    deleteCardCar: null
+    addedCardCar: null,
+    isPublishedCardCar: null,
+    categoriesId: null,
 }
 
 export const reducerData = (state = initialState, action) => {
     switch (action.type) {
         case 'SET_AUTHORIZATION':
             return {...state, isAuthorised: action.payload}
-        case 'ADD_NEW_CARD_CAR':
-            return {...state, addedNewCardCar: action.payload}
-        case 'DELETE_CARD_CAR':
-            return {...state, deleteCardCar: action.payload}
+        case 'GET_CARD_CAR':
+            return {...state, addedCardCar: action.payload}
+        case 'SET_CARD_CAR':
+            return {...state, isPublishedCardCar: action.payload}
+        case 'SET_ALL_CATEGORY':
+            return {...state, categoriesId: action.payload}
         default:
             return state
     }

@@ -9,7 +9,23 @@ const axiosInstance = axios.create({
     }
 })
 
+
 //авторизация
 export const postLogIn = (logIn) => {
     return axiosInstance.post(urls.logIn(), logIn)
+}
+
+//Добавление машины
+export const postCardCar = (access_token,cardCar) => {
+
+    return axiosInstance.post(urls.cardCar(), cardCar, {
+        headers: {
+            'Authorization': `Bearer ${access_token}`
+        }
+    })
+}
+
+// получаем категории авто
+export const getCategory = () => {
+    return axiosInstance.get(urls.categoryId())
 }

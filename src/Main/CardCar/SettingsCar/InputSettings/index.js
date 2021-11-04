@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {PlusOutlined} from "@ant-design/icons";
 import './inputSettings.scss'
+import {RadioButtonCategoriesId} from "../RadioButtonCategoriesId";
 
 export const InputSettings = ({
                                   modelCar,
@@ -13,9 +14,12 @@ export const InputSettings = ({
                                   setMaxPriceCar,
                                   nameColor,
                                   setNameColor,
-                                  newColor,
-                                  setNewColor
+                                  newColors,
+                                  setNewColors,
+                                  categorySelect,
+                                  setCategorySelect
                               }) => {
+
 
     //Ввод модели машины
     const handleChangeModelCar = (event) => {
@@ -44,7 +48,8 @@ export const InputSettings = ({
 
     //Добавление нового цвета для машины
     const handleAddNewColor = () => {
-        setNewColor([...newColor, nameColor]);
+        setNewColors([...newColors, nameColor]);
+        setNameColor('');
     }
 
     return (
@@ -91,6 +96,10 @@ export const InputSettings = ({
                         />
                     </div>
                 </div>
+
+                <RadioButtonCategoriesId categorySelect={categorySelect}
+                                         setCategorySelect={setCategorySelect}
+                />
 
                 <div className='setting-car-color'>
                     <h5 className='item-title'>Доступные цвета</h5>

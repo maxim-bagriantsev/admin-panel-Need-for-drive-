@@ -6,6 +6,7 @@ import {useDispatch} from "react-redux";
 import {message} from "antd";
 import './index.css';
 import './main.scss'
+import {useCategoryCar} from "../hook/useCategoryId";
 
 //свойства всплывающего сообщения авторизации
 message.config({
@@ -15,10 +16,12 @@ message.config({
 });
 
 export const LoginPanel = () => {
+    useCategoryCar()
     const [username, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const history = useHistory()
     const dispatch = useDispatch()
+
 
     const hendleChangeUserName = (event) => {
         setUserName(event.target.value)
@@ -41,7 +44,7 @@ export const LoginPanel = () => {
 
         postLogIn(logIn)
             .then(response => {
-                localStorage.setItem('token', JSON.stringify(response.data.access_token))
+                localStorage.setItem('access_token', JSON.stringify(response.data.access_token))
                 dispatch({type: 'SET_AUTHORIZATION', payload: true})
                 return history.push(`/main/carSetting`)
             })

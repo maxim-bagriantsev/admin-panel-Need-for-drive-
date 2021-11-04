@@ -8,7 +8,7 @@ import {ReactComponent as error} from '../../../assets/SVG/error.svg';
 
 export const panelList = [
     {icon: pen, title: 'Карточка автомобиля', link: '/main/carSetting'},
-    {icon: list, title: 'Список авто', link: '/main/listCars'},
+    {icon: list, title: 'Список машин', link: '/main/listCars'},
     {icon: doc, title: 'Заказы', link: '/main/orderList'},
     {icon: grid, title: 'Menu 4', link: '/main/error'},
     {icon: panel, title: 'Menu 5', link: '/main/error'},

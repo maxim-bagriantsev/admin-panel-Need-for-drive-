@@ -7,9 +7,8 @@ import './settingsCar.scss';
 
 export const SettingsCar = (props) => {
     const [nameColor, setNameColor] = useState('')
-    const [newColor, setNewColor] = useState([])
-
-
+    const [newColors, setNewColors] = useState([])
+    const [categorySelect, setCategorySelect] = useState('')
 
     return (
         <div className='details-card-setting'>
@@ -24,11 +23,14 @@ export const SettingsCar = (props) => {
                            setMaxPriceCar={props.setMaxPriceCar}
                            nameColor={nameColor}
                            setNameColor={setNameColor}
-                           newColor={newColor}
-                           setNewColor={setNewColor}
+                           newColors={newColors}
+                           setNewColors={setNewColors}
+                           categorySelect={categorySelect}
+                           setCategorySelect={setCategorySelect}
             />
-            <CheckboxColor newColor={newColor}
-                           setNewColor={setNewColor}
+
+            <CheckboxColor newColors={newColors}
+                           setNewColors={setNewColors}
                            nameColor={nameColor}
             />
 
@@ -45,10 +47,13 @@ export const SettingsCar = (props) => {
                               setMaxPriceCar={props.setMaxPriceCar}
                               descriptionCar={props.descriptionCar}
                               setDescriptionCar={props.setDescriptionCar}
-                              newColor={newColor}
+                              newColors={newColors}
                               setNameColor={setNameColor}
                               setImage={props.setImage}
-                              setNewColor={setNewColor}
+                              setNewColors={setNewColors}
+                              image={props.image}
+                              categorySelect={categorySelect}
+                              setCategorySelect={setCategorySelect}
             />
         </div>
     );

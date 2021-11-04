@@ -2,22 +2,26 @@ import React from 'react';
 import {Checkbox} from "antd";
 import './checkboxColor.scss'
 
-export const CheckboxColor = ({newColor, setNewColor}) => {
+export const CheckboxColor = ({newColors, setNewColors}) => {
 
-    const deleteItemColor = (id) => {
-        setNewColor([...newColor.slice(0, id), ...newColor.slice(id + 1)])
+    const deleteItemColor = (index) => {
+
+        const filteredColors = newColors.filter((item, i) => {
+            return i !== index
+        })
+        setNewColors(filteredColors)
     }
 
-    const colors = newColor.map((item, id) => {
+    const colors = newColors.map((item, index) => {
 
         return (
             <label className='checkbox-color'
-                   key={id}
+                   key={index}
             >
                 <Checkbox checked
-                          onClick={() => deleteItemColor(id)}
+                          onClick={() => deleteItemColor(index)}
                           item={item}
-                          key={id}
+                          key={index}
                 >{item}</Checkbox>
             </label>
         )

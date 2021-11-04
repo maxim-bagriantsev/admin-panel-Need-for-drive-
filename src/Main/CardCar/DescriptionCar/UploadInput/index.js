@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Upload} from "antd";
 import ImgCrop from 'antd-img-crop';
-
 import './uploadInput.scss';
 
 export const UploadInput = ({addedImageCar, setImage}) => {
 
     const handleChangeImage = async ({file}) => {
         setImage(file)
+
         const imageBase64 = await getBase64(file.originFileObj)
     }
 
