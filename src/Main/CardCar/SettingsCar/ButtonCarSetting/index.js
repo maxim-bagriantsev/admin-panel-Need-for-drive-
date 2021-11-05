@@ -96,7 +96,7 @@ export const ButtonCarSetting = ({
             setImage('')
             setNewColors([])
         }
-        const isDisableButton = !modelCar || !typeCar || !minPriceCar || !maxPriceCar || !descriptionCar || !newColors || !categorySelect || !image
+        const isEnableButton = !modelCar || !typeCar || !minPriceCar || !maxPriceCar || !descriptionCar || !newColors || !categorySelect || !image
 
         return (
             <div className='buttons'>
@@ -104,17 +104,24 @@ export const ButtonCarSetting = ({
                     <Button className='button-save'
                             type="primary"
                             onClick={handleAddNewCardCar}
-                            disabled={isDisableButton}
-                    >Сохранить
+                            disabled={isEnableButton}
+                    >
+                        Сохранить
                     </Button>
                     <Button className='button-cancel'
                             type='primary'
                             onClick={handleDeleteCardCar}
-                    >Отменить
+                    >
+                        Отменить
                     </Button>
                 </div>
                 <div className='buttons-one'>
-                    <Button className='button-delete' type="primary">Удалить</Button>
+                    <Button className='button-delete'
+                            type="primary"
+                            disabled={!isPublishedCardCar ? true : isEnableButton}
+                    >
+                        Удалить
+                    </Button>
                 </div>
             </div>
         );
