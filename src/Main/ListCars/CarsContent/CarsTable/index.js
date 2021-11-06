@@ -1,73 +1,48 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import './index.css';
-import {Table} from 'antd';
+import {Spin, Table} from 'antd';
 import './tableCars.scss'
-
-const columns = [
-    {
-        title: 'Фотография машины',
-        dataIndex: 'imgCar',
-        key: 'imgCar',
-        render: text => <a>{text}</a>,
-    },
-    {
-        title: 'Модель',
-        dataIndex: 'modelCar',
-        key: 'modelCar',
-    },
-    {
-        title: 'Класс',
-        dataIndex: 'classCar',
-        key: 'classCar',
-    },
-    {
-        title: 'Регистрационный знак',
-        key: 'regSign',
-        dataIndex: 'regSign',
-    },
-    {
-        title: 'Минимальная цена',
-        key: 'minPrice',
-        dataIndex: 'minPrice',
-    },
-    {
-        title: 'Максимальная цена',
-        key: 'maxPrice',
-        dataIndex: 'maxPrice',
-    },
-];
-
-const data = [
-    {
-        key: '1',
-        name: 'Elantra',
-        age: 32,
-        address: 'New York No. 1 Lake Park',
-        tags: ['nice', 'developer'],
-    },
-    {
-        key: '2',
-        name: 'Jim Green',
-        age: 42,
-        address: 'London No. 1 Lake Park',
-        tags: ['loser'],
-    },
-    {
-        key: '3',
-        name: 'Joe Black',
-        age: 32,
-        address: 'Sidney No. 1 Lake Park',
-        tags: ['cool', 'teacher'],
-    },
-];
+import {useAllCar} from "../../../../hook/useAllCar";
+import {useSelector} from "react-redux";
+import {columns} from "./common/colums";
 
 export const CarsTable = () => {
+
+    useAllCar()
+    const {
+        addedAllCar
+    } = useSelector((state) => {
+        return state.reducerData
+    })
+
+    if (!addedAllCar) {
+        return <Spin/>
+    }
+
+    //выбираем машину для редактирования
+    const hendleChange = () => {
+
+    }
+
+    const listCarsTable = addedAllCar?.map((item) => {
+        return {
+            thumbnail: item.thumbnail,
+            modelCar: item.name,
+            classCar: item.categoryId,
+            regSign: item.number,
+            minPrice: item.priceMin,
+            maxPrice: item.priceMax
+        }
+    })
+
     return (
         <div className='table-cars'>
-            <Table columns={columns}
-                   pagination={{position: 'bottomCenter' }}
-                                      dataSource={data}
+            <Table size="small"
+                   columns={columns}
+                   pagination={{position: 'bottomCenter'}}
+                   dataSource={listCarsTable}
+                   onChange={hendleChange}
             />
         </div>)
 };

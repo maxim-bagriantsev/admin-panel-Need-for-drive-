@@ -3,6 +3,7 @@ const initialState = {
     addedCardCar: null,
     isPublishedCardCar: null,
     categoriesId: null,
+    addedAllCar: null
 }
 
 export const reducerData = (state = initialState, action) => {
@@ -15,6 +16,8 @@ export const reducerData = (state = initialState, action) => {
             return {...state, isPublishedCardCar: action.payload}
         case 'SET_ALL_CATEGORY':
             return {...state, categoriesId: action.payload}
+        case 'GET_ALL_CAR':
+            return {...state, addedAllCar: action.payload}
         default:
             return state
     }

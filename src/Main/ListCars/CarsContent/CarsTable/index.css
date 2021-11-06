@@ -1,4 +1,12 @@
+.ant-table-wrapper {
+    clear: both;
+}
+
 .ant-table-thead tr th {
+    text-align: center;
+}
+
+.ant-table-cell {
     text-align: center;
 }
 
@@ -19,6 +27,7 @@
     .ant-table-thead {
         font-size: 10px;
     }
+
     .ant-table-container {
         flex-wrap: wrap;
     }

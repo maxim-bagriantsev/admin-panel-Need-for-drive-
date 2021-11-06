@@ -5,7 +5,6 @@ import {Button, message} from 'antd';
 import {useDispatch, useSelector} from "react-redux";
 import './buttonCarSettingn.scss'
 import {postCardCar} from "../../../../api/api";
-import {reducerData} from "../../../../redux/reducerData/reducerData";
 
 //свойства всплывающего сообщения при успешном,неуспешном  добавлении машины на сервер.
 message.config({

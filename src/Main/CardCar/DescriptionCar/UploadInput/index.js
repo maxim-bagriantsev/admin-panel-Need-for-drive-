@@ -11,6 +11,7 @@ export const UploadInput = ({addedImageCar, setImage}) => {
         const imageBase64 = await getBase64(file.originFileObj)
     }
 
+
     function getBase64(file) {
         return new Promise((resolve, reject) => {
             const reader = new FileReader();

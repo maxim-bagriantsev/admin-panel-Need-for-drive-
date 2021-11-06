@@ -9,7 +9,6 @@ const axiosInstance = axios.create({
     }
 })
 
-
 //авторизация
 export const postLogIn = (logIn) => {
     return axiosInstance.post(urls.logIn(), logIn)
@@ -28,4 +27,9 @@ export const postCardCar = (access_token,cardCar) => {
 // получаем категории авто
 export const getCategory = () => {
     return axiosInstance.get(urls.categoryId())
+}
+
+// получаем категории авто
+export const getAllCar = () => {
+    return axiosInstance.get(urls.allCar())
 }
