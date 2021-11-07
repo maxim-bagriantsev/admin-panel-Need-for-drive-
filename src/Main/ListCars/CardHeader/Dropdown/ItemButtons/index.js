@@ -1,23 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Select} from "antd";
 import Icon from "@ant-design/icons";
 import {ReactComponent as doubleArrow} from "../../../../../assets/SVG/doubleArrow.svg";
-import {classCars} from "./constants";
+import {useSelector} from "react-redux";
 
-const {Option} = Select;
+export const ItemButton = ({setSelectCategoryId}) => {
 
-function handleChange(value) {
-    console.log(`selected ${value}`);
-}
+    const {
+        categoriesId
+    } = useSelector((state) => {
+        return state.reducerData
+    })
 
-const dropdownButtonClassCars = classCars.map((item, id) => {
-    return (
-        <Option key={id}
-                value={item.value}>{item.text}</Option>
-    )
-})
+    const {Option} = Select;
 
-export const ItemButton = () => {
+    const handleChange = (value) => {
+        setSelectCategoryId(value)
+    }
+
+    const dropdownButtonClassCars = categoriesId?.map((item, id) => {
+        return (
+            <Option key={id}
+                    value={item.id}
+                    >
+                {item.name}
+            </Option>
+        )
+    })
+
     return (
         <>
             <Select

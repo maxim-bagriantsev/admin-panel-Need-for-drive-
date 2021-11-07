@@ -4,7 +4,7 @@ import './index.css';
 import {Button, message} from 'antd';
 import {useDispatch, useSelector} from "react-redux";
 import './buttonCarSettingn.scss'
-import {postCardCar} from "../../../../api/api";
+import {deleteCardCar, postCardCar} from "../../../../api/api";
 
 //свойства всплывающего сообщения при успешном,неуспешном  добавлении машины на сервер.
 message.config({
@@ -35,10 +35,13 @@ export const ButtonCarSetting = ({
         const dispatch = useDispatch()
 
         const {
-            isPublishedCardCar
+            isPublishedCardCar,
+            addedCardCar
         } = useSelector((state) => {
             return state.reducerData
         })
+
+        const access_token = JSON.parse(localStorage.getItem('access_token'))
 
         const handleAddNewCardCar = () => {
 
@@ -70,7 +73,7 @@ export const ButtonCarSetting = ({
                 colors: newColors,
             }
 
-            const access_token = JSON.parse(localStorage.getItem('access_token'))
+            // const access_token = JSON.parse(localStorage.getItem('access_token'))
 
             postCardCar(access_token, cardCar)
                 .then(response => {
@@ -85,7 +88,7 @@ export const ButtonCarSetting = ({
                 });
         }
 
-        const handleDeleteCardCar = () => {
+        const handleCancelInfoCardCar = () => {
             setModelCar('')
             setTypeCar('')
             setMinPriceCar('')
@@ -95,6 +98,31 @@ export const ButtonCarSetting = ({
             setImage('')
             setNewColors([])
         }
+
+        const hendleDeleteCardCar = () => {
+
+            const info = () => {
+                if (isPublishedCardCar) {
+                    message.info('Успешно! Машина удалена');
+                }
+                if (!isPublishedCardCar) {
+                    message.info('При удалении машины возникли проблемы');
+                }
+            };
+
+
+            deleteCardCar(access_token, addedCardCar.data.id)
+                .then(response => {
+                    dispatch({type: 'DELETE_CARD_CAR', payload: true})
+                    info()
+                })
+
+                .catch(error => {
+                    dispatch({type: 'DELETE_CARD_CAR', payload: false})
+                    info()
+                });
+        }
+
         const isEnableButton = !modelCar || !typeCar || !minPriceCar || !maxPriceCar || !descriptionCar || !newColors || !categorySelect || !image
 
         return (
@@ -109,7 +137,7 @@ export const ButtonCarSetting = ({
                     </Button>
                     <Button className='button-cancel'
                             type='primary'
-                            onClick={handleDeleteCardCar}
+                            onClick={handleCancelInfoCardCar}
                     >
                         Отменить
                     </Button>
@@ -118,6 +146,7 @@ export const ButtonCarSetting = ({
                     <Button className='button-delete'
                             type="primary"
                             disabled={!isPublishedCardCar ? true : isEnableButton}
+                            onClick={hendleDeleteCardCar}
                     >
                         Удалить
                     </Button>

@@ -5,10 +5,11 @@ export const columns = [
         title: 'Фотография машины',
         dataIndex: 'thumbnail',
         key: 'thumbnail',
-        width: 0,
         render: (thumbUrl) => (
-            <img src={(thumbUrl?.path.includes('base64')) ? thumbUrl.path : 'https://api-factory.simbirsoft1.com' + thumbUrl.path} alt="image"
-                 style={{height: '30px'}}
+            <img
+                src={(thumbUrl?.path.includes('base64')) ? thumbUrl.path : 'https://api-factory.simbirsoft1.com' + thumbUrl.path}
+                alt="image"
+                style={{height: '30px'}}
             />
         )
     },
@@ -20,7 +21,6 @@ export const columns = [
     {
         title: 'Класс',
         dataIndex: 'classCar',
-        width: 10,
         key: 'classCar',
         render: (categoryId) => categoryId?.name
     },

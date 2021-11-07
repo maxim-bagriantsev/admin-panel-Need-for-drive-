@@ -4,6 +4,7 @@ import {ProgressCar} from "./ProgressCar";
 import {Description} from "./Description";
 import {Skeleton} from "antd";
 import './descriptionCar.scss';
+import {useSelector} from "react-redux";
 
 export const DescriptionCar = ({
                                    modelCar,
@@ -15,6 +16,8 @@ export const DescriptionCar = ({
                                    image,
                                    setImage
                                }) => {
+
+
 
     return (
         <div className='details-card-car'>

@@ -1,7 +1,10 @@
 import React from 'react';
 import './description.scss'
+import {useSelector} from "react-redux";
 
 export const Description = ({descriptionCar}) => {
+
+
 
     return (
         <div className='description'>

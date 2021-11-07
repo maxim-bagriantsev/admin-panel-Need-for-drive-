@@ -3,7 +3,10 @@ const initialState = {
     addedCardCar: null,
     isPublishedCardCar: null,
     categoriesId: null,
-    addedAllCar: null
+    addedAllCar: null,
+    deleteCardCar: null,
+    filteredCategoryCars: null,
+    addedCarByCard: null
 }
 
 export const reducerData = (state = initialState, action) => {
@@ -18,6 +21,12 @@ export const reducerData = (state = initialState, action) => {
             return {...state, categoriesId: action.payload}
         case 'GET_ALL_CAR':
             return {...state, addedAllCar: action.payload}
+        case 'DELETE_CARD_CAR':
+            return {...state, deleteCardCar: action.payload}
+        case 'GET_FILTER_CATEGORY_CARS':
+            return {...state, filteredCategoryCars: action.payload}
+        case 'ADD_CAR_BY_CARD':
+            return {...state, addedCarByCard: action.payload}
         default:
             return state
     }
