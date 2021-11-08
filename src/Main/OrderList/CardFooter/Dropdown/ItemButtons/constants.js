@@ -14,6 +14,10 @@ export const dropdownListCars =[
 
 export const dropdownListTowns =[
     {value: 'Ульяновск', text: 'Ульяновск' },
+    {value: 'Казань', text: 'Казань' },
+    {value: 'Уфа', text: 'Уфа' },
+    {value: 'Омск', text: 'Омск' },
+    {value: 'Краснодар', text: 'Краснодар' },
     {value: 'Самара', text: 'Самара' },
     {value: 'Москва', text: 'Москва' },
     {value: 'Санкт-Петербург', text: 'Санкт-Петербург' }
@@ -23,5 +27,5 @@ export const dropdownOrderStatus =[
     {value: 'Новый', text: 'Новый' },
     {value: 'Подтвержденный', text: 'Подтвержденный' },
     {value: 'Отмененный', text: 'Отмененный' },
-    {value: 'В процессе', text: 'В процессе' }
+    {value: 'Временные', text: 'Временные' }
 ]

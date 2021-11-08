@@ -73,8 +73,6 @@ export const ButtonCarSetting = ({
                 colors: newColors,
             }
 
-            // const access_token = JSON.parse(localStorage.getItem('access_token'))
-
             postCardCar(access_token, cardCar)
                 .then(response => {
                     dispatch({type: 'GET_CARD_CAR', payload: response.data})

@@ -7,17 +7,23 @@ function onChange(e) {
     console.log(`checked = ${e.target.checked}`);
 }
 
-export const ChecknoxCard = () => {
+export const CheckboxCard = () => {
     return (
         <div className='card-content-checkbox'>
             <label className='checkbox'>
-                <Checkbox onChange={onChange}>Полный бак</Checkbox>
+                <Checkbox onChange={onChange}>
+                    <p className='checkbox-text'>Полный бак</p>
+                </Checkbox>
             </label>
             <label className='checkbox'>
-                <Checkbox onChange={onChange}>Детское кресло</Checkbox>
+                <Checkbox onChange={onChange}>
+                    <p className='checkbox-text'>Детское кресло</p>
+                </Checkbox>
             </label>
             <label className='checkbox'>
-                <Checkbox onChange={onChange}>Правый руль</Checkbox>
+                <Checkbox onChange={onChange}>
+                    <p className='checkbox-text'>Правый руль</p>
+                </Checkbox>
             </label>
         </div>
     );

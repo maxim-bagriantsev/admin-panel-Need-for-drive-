@@ -4,9 +4,13 @@ import {CardFooter} from "./CardFooter";
 import {CardContent} from "./CardContent";
 import './orderList.scss'
 import 'antd/dist/antd.css';
+import {useAllStatusOrder} from "../../hook/useAllStatusOrder";
 
 export const OrderList = () => {
-    return (
+
+    useAllStatusOrder()
+
+        return (
         <div className='card-orderList'>
             <h2 className='card-orderList-title'>Заказы</h2>
             <div className='card-orderList-background'>

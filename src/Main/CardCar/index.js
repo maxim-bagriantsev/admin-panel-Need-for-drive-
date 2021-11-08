@@ -18,21 +18,19 @@ export const CardCar = ({newColors}) => {
         return state.reducerData
     })
 
-    console.log(addedCarByCard.thumbUrl)
-
     return (
         <div className='card-setting'>
             <h2 className='card-setting-title'>Карточка автомобиля</h2>
             <div className='card-setting-background'>
-                {<DescriptionCar image={image}
-                                 setImage={setImage}
-                                 modelCar={modelCar}
-                                 typeCar={typeCar}
-                                 minPriceCar={minPriceCar}
-                                 maxPriceCar={maxPriceCar}
-                                 descriptionCar={descriptionCar}
-                                 newColors={newColors}
-                />}
+                <DescriptionCar image={image}
+                                setImage={setImage}
+                                modelCar={modelCar}
+                                typeCar={typeCar}
+                                minPriceCar={minPriceCar}
+                                maxPriceCar={maxPriceCar}
+                                descriptionCar={descriptionCar}
+                                newColors={newColors}
+                />
                 <SettingsCar modelCar={modelCar}
                              image={image}
                              setImage={setImage}

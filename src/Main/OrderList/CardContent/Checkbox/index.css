@@ -3,6 +3,15 @@
     flex-direction: column;
     margin-left: 86.5px;
     margin-top: 16.5px;
+    font-size: 10px;
+}
+
+.checkbox {
+    margin-bottom: 0;
+}
+
+.checkbox-text {
+    font-size: 12px;
 }
 
 .ant-checkbox {
@@ -10,7 +19,7 @@
     margin: 0;
     padding: 0;
     color: rgba(0, 0, 0, 0.85);
-    font-size: 14px;
+    font-size: 10px;
     font-variant: tabular-nums;
     line-height: 1.5715;
     list-style: none;

@@ -1,19 +1,29 @@
 import React from 'react';
-import car from "../../../../assets/Images/car-mock.png";
 import './infoOrder.scss'
+import moment from 'moment'
 
-export const InfoOrder = () => {
+export const InfoOrder = ({
+                              image,
+                              model,
+                              cityName,
+                              address,
+                              dateFrom,
+                              dateTo,
+                              colors
+                          }) => {
+
+
     return (
-        <>
-            <img className='card-content-imageCar' src={car} alt=""/>
+        <div className='card-content-image-info'>
+            <img className='card-content-imageCar' src={image} alt=""/>
             <div className='card-content-infoOrder'>
-                <section><span>ELANTRA</span> в <span>Ульяновск</span>, Нариманова 42</section>
-                <section>12.06.2019 12:00 — 13.06.2019 12:00</section>
+                <section><span>{model}</span> в <span>{cityName}</span>, {address}</section>
+                <section> {moment(dateFrom).format('DD.MM.YYYY h:mm')} — {moment(dateTo).format('DD.MM.YYYY h:mm')}</section>
                 <section>Цвет:
-                    <span> Голубой</span>
+                    <span> {`${colors}`}</span>
                 </section>
             </div>
-        </>
+        </div>
     );
 };
 

@@ -16,7 +16,6 @@ export const postLogIn = (logIn) => {
 
 //Добавление машины
 export const postCardCar = (access_token, cardCar) => {
-
     return axiosInstance.post(urls.cardCar(), cardCar, {
         headers: {
             'Authorization': `Bearer ${access_token}`
@@ -43,8 +42,17 @@ export const getAllCar = () => {
     return axiosInstance.get(urls.allCar())
 }
 
-export const getFilterCategory=(selectedCategoryId) => {
+export const getFilterCategory = (selectedCategoryId) => {
     return axiosInstance.get(urls.categoryIdFilter(selectedCategoryId))
 }
+
+export const getAllOrder = (access_token) => {
+    return axiosInstance.get(urls.orderAll(), {
+        headers: {
+            'Authorization': `Bearer ${access_token}`
+        }
+    })
+}
+
 
 
