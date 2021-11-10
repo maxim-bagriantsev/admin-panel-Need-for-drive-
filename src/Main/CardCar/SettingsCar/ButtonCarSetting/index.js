@@ -108,7 +108,6 @@ export const ButtonCarSetting = ({
                 }
             };
 
-
             deleteCardCar(access_token, addedCardCar.data.id)
                 .then(response => {
                     dispatch({type: 'DELETE_CARD_CAR', payload: true})

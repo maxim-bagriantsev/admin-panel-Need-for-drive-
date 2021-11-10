@@ -1,52 +1,55 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './contentInfo.scss'
 import {MenuButton} from "./MenuButton";
 import {Price} from "./Price";
 import {CheckboxCard} from "./Checkbox";
 import {InfoOrder} from "./InfoOrder";
 import {useSelector} from "react-redux";
-import {Spin} from "antd";
+import {Empty} from "antd";
+
 
 export const CardContent = () => {
 
+    const [isVisibleButtonReady, setIsVisibleButtonReady] = useState(true)
+
     const {
-        addedAllOrder
+        filteredOrders
     } = useSelector((state) => {
         return state.reducerData
     })
-
-    if (!addedAllOrder) {
-        return <Spin/>
+    if (!filteredOrders) {
+        return ''
     }
 
-    const orderItems = addedAllOrder.data.map((item, index) => {
+    const orderItems = filteredOrders?.data?.map((item, index) => {
+
         return (
             <div className='card-content' key={index}>
-                <InfoOrder image={item.carId.thumbnail.path.includes('base64')
-                    ? item.carId.thumbnail.path
-                    : 'https://api-factory.simbirsoft1.com' + item.carId.thumbnail.path}
-                           model={item.carId.name}
+                <InfoOrder image={item.carId?.thumbnail?.path.includes('base64')
+                    ? item.carId.thumbnail?.path
+                    : 'https://api-factory.simbirsoft1.com' + item.carId?.thumbnail?.path}
+                           model={item.carId?.name}
                            cityName={item.cityId?.name}
                            address={item.pointId?.address}
                            dateFrom={item.dateFrom}
                            dateTo={item.dateTo}
-                           colors={[...item.carId.colors]}
+                           colors={item.carId?.colors ? [...item.carId?.colors] : []}
                 />
-                <CheckboxCard/>
-                <Price/>
-                <MenuButton/>
+                <CheckboxCard isFullTank={item.isFullTank}
+                              isNeedChildChair={item.isNeedChildChair}
+                              isRightWheel={item.isRightWheel}
+
+                />
+                <Price price={item.price}/>
+                <MenuButton orderStatusId={item.orderStatusId}/>
             </div>
         )
     })
 
     return (
-        orderItems
-        // <div className='card-content'>
-        //     <InfoOrder/>
-        //     <CheckboxCard/>
-        //     <Price/>
-        //     <MenuButton/>
-        // </div>
+        <>
+            {!orderItems ? < Empty image={Empty.PRESENTED_IMAGE_SIMPLE}/> : orderItems}
+        </>
     );
 };
 

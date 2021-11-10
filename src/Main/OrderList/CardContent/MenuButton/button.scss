@@ -1,5 +1,6 @@
 .card-content-buttons {
   display: flex;
+
   margin-top: 31.5px;
   margin-right: 22.5px;
 }
@@ -17,7 +18,6 @@
   border-right: none;
 }
 
-
 .item-button {
   width: 71.5px;
   height: 24px;
@@ -25,7 +25,17 @@
   align-items: center;
   background: #FFFFFF;
   border: 0.5px solid #BECAD6;
+  cursor: pointer;
 }
+
+.item-button:hover {
+  background: #e8e7e7;
+}
+
+.item-button:active {
+  background: #d7d6d6;
+}
+
 
 .item-button section {
   font-size: 11px;

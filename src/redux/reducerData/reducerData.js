@@ -7,7 +7,13 @@ const initialState = {
     deleteCardCar: null,
     filteredCategoryCars: null,
     addedCarByCard: null,
-    addedAllOrder: null
+
+    selectedPeriodTime: 'За неделю',
+    selectedCar: '',
+    selectedTown: '5ea07ad3099b810b946c6254',
+    selectedOrderStatus: '5e26a191099b810b946c5d89',
+    filteredOrders: [],
+    currentPage: 0
 }
 
 export const reducerData = (state = initialState, action) => {
@@ -28,8 +34,23 @@ export const reducerData = (state = initialState, action) => {
             return {...state, filteredCategoryCars: action.payload}
         case 'ADD_CAR_BY_CARD':
             return {...state, addedCarByCard: action.payload}
-        case 'GET_ALL_ORDER':
-            return {...state, addedAllOrder: action.payload}
+
+        // Выбор параметра на страницы "Заказы" состояние dropdowns
+        case 'SELECT_PERIOD_TIME':
+            return {...state, selectedPeriodTime: action.payload}
+        case 'SELECT_CAR':
+            return {...state, selectedCar: action.payload}
+        case 'SELECT_TOWN':
+            return {...state, selectedTown: action.payload}
+        case 'SELECT_ORDER_STATUS':
+            return {...state, selectedOrderStatus: action.payload}
+        case 'ADD_CURRENT_PAGE':
+            return {...state, currentPage: action.payload}
+
+        // Получаем отфильтрованные заказы
+        case 'IS_FILTERED_ORDER':
+            return {...state, filteredOrders: action.payload}
+
         default:
             return state
     }

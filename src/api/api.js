@@ -54,5 +54,27 @@ export const getAllOrder = (access_token) => {
     })
 }
 
+//Фильтр заказов
+export const getFilterOrder = (access_token, selectedItems) => {
+    return axiosInstance.get(urls.filterOrder(selectedItems), {
+        headers: {
+            'Authorization': `Bearer ${access_token}`
+        }
+    })
+}
+
+// Подтверждение заказа
+export const orderStatusComplete = (access_token) => {
+    return axiosInstance.get(urls.orderComplete(), {
+        headers: {
+            'Authorization': `Bearer ${access_token}`
+        }
+    })
+}
+
+
+
+
+
 
 

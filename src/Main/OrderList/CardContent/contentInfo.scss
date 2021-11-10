@@ -1,10 +1,15 @@
 .card-content {
   display: flex;
-
-  width: 100%;
-  height: auto;
-  justify-content: space-between;
   margin-bottom: 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card-content:hover {
+  display: flex;
+  background-color: #f3f5f6;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: 1150px) {
