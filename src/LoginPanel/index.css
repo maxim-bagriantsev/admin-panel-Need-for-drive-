@@ -1,0 +1,17 @@
+.ant-message-notice {
+    padding: 0 !important;
+}
+
+.ant-message-notice-content {
+    width: 100%;
+    padding: 5px 0 !important;
+    background-color: rgba(203, 247, 223, 0.8) !important;
+    box-shadow: none;
+}
+
+.ant-message-info span {
+    font-weight: 500;
+}
+
+
+

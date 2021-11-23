@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+
+  <symbol id="pen" viewBox="0 0 13 12">
+    <g> 
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 1H3.5C2.95 1 2.505 1.45 2.505 2L2.5 10C2.5 10.55 2.945 11 3.495 11H9.5C10.05 11 10.5 10.55 10.5 10V4L7.5 1ZM8.5 8H7V9.5H6V8H4.5V7H6V5.5H7V7H8.5V8ZM7 1.75V4.5H9.75L7 1.75Z" fill="#CACEDB"/>
+   </g>
+  </symbol>
+
+  <symbol id="error" viewBox="0 0 15 15">
+    <g> 
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25 1.5C4.076 1.5 1.5 4.076 1.5 7.25C1.5 10.424 4.076 13 7.25 13C10.424 13 13 10.424 13 7.25C13 4.076 10.424 1.5 7.25 1.5ZM7.82505 10.125H6.67505V8.97501H7.82505V10.125ZM6.67505 7.825H7.82505V4.375H6.67505V7.825Z" fill="#CACEDB"/>
+
+   </g>
+  </symbol>
+
+  </svg>

@@ -1,0 +1,52 @@
+.card-listCars {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f6f8;
+}
+
+.card-listCars-background {
+  margin-left: 32px;
+  margin-right: 25px;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 0px rgba(90, 97, 105, 0.11), 0px 4px 8px rgba(90, 97, 105, 0.12), 0px 10px 10px rgba(90, 97, 105, 0.06), 0px 7px 70px rgba(90, 97, 105, 0.1);
+  border-radius: 9px;
+}
+
+.card-listCars-title {
+  margin-top: 28.5px;
+  margin-bottom: 28.5px;;
+  margin-left: 31.5px;
+  font-size: 29px;
+  line-height: 33.4px;
+  font-weight: 400;
+  color: #3D5170;
+}
+
+@media (max-width: 1150px) {
+  .card-listCars {
+    width: 100%;
+
+  }
+
+  .card-listCars-title {
+    width: auto;
+    margin-top: 20px;
+    font-size: 24px;
+    margin-bottom: 12px;
+
+  }
+  .card-listCars-background {
+    height: 500px !important;
+    margin-left: 32px;
+    margin-right: 25px;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 0px rgba(90, 97, 105, 0.11), 0px 4px 8px rgba(90, 97, 105, 0.12), 0px 10px 10px rgba(90, 97, 105, 0.06), 0px 7px 70px rgba(90, 97, 105, 0.1);
+    border-radius: 9px;
+    overflow: hidden;
+
+  }
+}
+

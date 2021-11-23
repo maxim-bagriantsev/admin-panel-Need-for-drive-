@@ -1,0 +1,13 @@
+.table-cars {
+  width: 100%;
+}
+
+.row-className {
+  cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+  .table-cars {
+    width: inherit;
+  }
+}

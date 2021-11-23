@@ -1,0 +1,98 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-left: 18px;
+  margin-bottom: 18px;
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+
+.buttons-group {
+
+}
+
+.button-save {
+  width: 110px;
+  height: 29px;
+  border-radius: 4px;
+  margin-right: 12.5px;
+  background: #007BFF;
+  border: none;
+}
+
+.button-save:hover {
+  background: #155fb0;
+}
+
+.button-save:active {
+  background: #007BFF;
+}
+
+.button-save:focus {
+  background: #007BFF;
+}
+
+.button-cancel {
+  width: 110px;
+  height: 29px;
+  border-radius: 4px;
+  color: #3D5170;
+  background: #E9ECEF;
+  border: none;
+}
+
+.button-cancel:hover {
+  background: #676b6e;
+  color: #fff;
+}
+
+.button-cancel:active {
+  background: #E9ECEF;
+  color: #3D5170;
+}
+
+.button-cancel:focus {
+  background: #E9ECEF;
+  color: #3D5170;
+}
+
+.button-delete {
+  width: 110px;
+  height: 29px;
+  border-radius: 4px;
+  background: #CB3656;
+  border: none;
+}
+
+.button-delete:hover {
+  background: #a9203d;
+}
+
+.button-delete:active {
+  background: #a9203d;
+}
+
+.button-delete:focus {
+  background: #a9203d;
+}
+
+.buttons-one {
+  margin-right: 18px;
+}
+
+@media (max-width: 1024px) {
+  .buttons {
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-bottom: 18px;
+    font-size: 8px;
+  }
+
+  .button-save {
+    margin-bottom: 10px;
+  }
+}

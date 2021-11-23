@@ -1,0 +1,72 @@
+.error-component {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.error-component-status {
+  font-family: "RobotoMedium", sans-serif;
+  font-weight: 500;
+  letter-spacing: -5px;
+  font-size: 75px;
+  line-height: 88px;
+  color: #cacedb;
+  margin-bottom: 0;
+}
+
+.error-component-title {
+  margin-bottom: 16px;
+  font-weight: 400;
+  letter-spacing: -2px;
+  font-size: 50px;
+  line-height: 57px;
+  color: #3d5170;
+}
+
+.error-component-subtitle {
+  margin-bottom: 32px;
+  font-weight: 400;
+  letter-spacing: -.5px;
+  font-size: 20px;
+  line-height: 23px;
+  color: #818ea3;
+}
+
+.error-component-button {
+  width: 95px;
+  height: 29px;
+
+}
+
+.error-component-button span {
+  color: #FFFFFF;
+}
+
+@media (max-width: 680px) {
+  .error-component-status {
+    font-size: 50px;
+  }
+
+  .error-component-title {
+    font-size: 30px;
+  }
+  .error-component-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .error-component-status {
+    font-size: 50px;
+  }
+
+  .error-component-title {
+    font-size: 30px;
+  }
+
+  .error-component-subtitle {
+    font-size: 16px;
+  }
+}
+

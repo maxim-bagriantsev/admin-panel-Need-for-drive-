@@ -1,0 +1,34 @@
+.card-content {
+  display: flex;
+  margin-bottom: 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card-content:hover {
+  display: flex;
+  background-color: #f3f5f6;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+  .card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+    align-items: start;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
